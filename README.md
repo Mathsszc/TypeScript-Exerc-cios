@@ -23,7 +23,7 @@ O objetivo deste projeto é treinar conceitos de lógica de programação, estru
 
 ### 1. Clone o repositório (se aplicável)
 
-
+```bash
 git clone https://github.com/seu-usuario/menu-exercicios-ts.git
 cd menu-exercicios-ts
 
@@ -35,14 +35,15 @@ npm init -y
 
 npm install readline-sync
 npm install typescript ts-node --save-dev
-
 4. Configure o TypeScript
-5. 
 Crie um arquivo tsconfig.json com:
 
-npx tsc --init
+bash
 
+npx tsc --init
 Altere ou confirme as opções abaixo:
+
+json
 
 {
   "compilerOptions": {
@@ -54,6 +55,7 @@ Altere ou confirme as opções abaixo:
   }
 }
 5. Estrutura de pastas recomendada
+pgsql
 
 menu-exercicios-ts/
 ├── node_modules/
@@ -61,16 +63,16 @@ menu-exercicios-ts/
 │   └── index.ts   ← Cole aqui o código com os exercícios
 ├── tsconfig.json
 ├── package.json
-
 🚀 Como Executar
 Dentro da pasta do projeto, execute:
+
+bash
 
 npx ts-node src/index.ts
 Você verá um menu como este:
 
 python-repl
-Copiar
-Editar
+
 ===== MENU DE EXERCÍCIOS =====
 0 - Sair
 1 - Exercício 1
