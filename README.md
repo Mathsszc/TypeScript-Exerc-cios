@@ -144,12 +144,3 @@ Nº	Descrição
 18	Contador de palavras
 
 
-📌 Considerações Finais
-
-Este projeto é ideal para quem deseja reforçar fundamentos de programação usando TypeScript no terminal. Além disso, pode ser expandido para:
-
-Testes automatizados com Jest
-
-Interface gráfica com Electron ou Web
-
-Publicação como CLI com npm link o bash esta pegando o ar
