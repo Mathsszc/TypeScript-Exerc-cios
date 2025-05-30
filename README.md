@@ -19,20 +19,29 @@ O objetivo deste projeto é treinar conceitos de lógica de programação, estru
 
 ---
 
-## ⚙️ Instalação e Configuração
+⚙️ Instalação e Configuração
 
-### 1. Clone o repositório (se aplicável)
+1. Clone o repositório (se aplicável)
+
+Abra o terminal e execute o seguinte comando para clonar o repositório e acessar a pasta do projeto:
+
 
 git clone https://github.com/seu-usuario/menu-exercicios-ts.git
+
 cd menu-exercicios-ts
 
-
 2. Inicialize o projeto Node.js
+
+Agora, inicialize o projeto Node.js com o comando abaixo. Isso criará o arquivo package.json automaticamente:
+
 
 npm init -y
 
 
 3. Instale as dependências
+
+Instale as dependências necessárias para o projeto com os seguintes comandos:
+
 
 npm install readline-sync
 
@@ -41,21 +50,23 @@ npm install typescript ts-node --save-dev
 
 4. Configure o TypeScript
 
-Crie um arquivo tsconfig.json com:
+Agora, configure o TypeScript. Execute o comando para gerar o arquivo de configuração tsconfig.json:
+
 
 npx tsc --init
 
-Altere ou confirme as opções abaixo:
+
+Após isso, abra o arquivo tsconfig.json gerado e altere (ou confirme) as seguintes opções para que o TypeScript seja configurado corretamente:
 
 
 {
-  
+
   "compilerOptions": {
     
     "target": "es6",
     
     "module": "commonjs",
-   
+    
     "outDir": "./dist",
     
     "rootDir": "./src",
@@ -68,6 +79,8 @@ Altere ou confirme as opções abaixo:
 
 5. Estrutura de pastas recomendada
 
+A estrutura do seu projeto deve ser parecida com essa:
+
 menu-exercicios-ts/
 
 ├── node_modules/
@@ -79,6 +92,18 @@ menu-exercicios-ts/
 ├── tsconfig.json
 
 ├── package.json
+
+
+6. Abrindo o projeto no Visual Studio Code
+
+Para abrir o projeto no Visual Studio Code diretamente do terminal, execute o seguinte comando:
+
+
+code .
+
+
+Isso abrirá a pasta do projeto no VSCode, permitindo que você edite os arquivos como o index.ts, o tsconfig.json e o package.json com facilidade.
+
 
 🚀 Como Executar
 
