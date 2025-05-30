@@ -26,20 +26,25 @@ O objetivo deste projeto é treinar conceitos de lógica de programação, estru
 git clone https://github.com/seu-usuario/menu-exercicios-ts.git
 cd menu-exercicios-ts
 
+
 2. Inicialize o projeto Node.js
 
 npm init -y
 
+
 3. Instale as dependências
 
 npm install readline-sync
+
 npm install typescript ts-node --save-dev
 
+
 4. Configure o TypeScript
+
 Crie um arquivo tsconfig.json com:
 
-
 npx tsc --init
+
 Altere ou confirme as opções abaixo:
 
 
@@ -53,31 +58,46 @@ Altere ou confirme as opções abaixo:
   }
 }
 
+
 5. Estrutura de pastas recomendada
 
 menu-exercicios-ts/
+
 ├── node_modules/
+
 ├── src/
+
 │   └── index.ts   ← Cole aqui o código com os exercícios
+
 ├── tsconfig.json
+
 ├── package.json
+
 🚀 Como Executar
+
 Dentro da pasta do projeto, execute:
 
-
 npx ts-node src/index.ts
+
 Você verá um menu como este:
 
 
 ===== MENU DE EXERCÍCIOS =====
 0 - Sair
+
 1 - Exercício 1
+
 2 - Exercício 2
+
 ...
+
 18 - Exercício 18
+
 Escolha uma opção e siga as instruções no terminal.
 
+
 🧪 Exercícios Disponíveis
+
 Nº	Descrição
 1	Soma de dois números
 2	Par ou ímpar
