@@ -34,6 +34,7 @@ npm init -y
 
 npm install readline-sync
 npm install typescript ts-node --save-dev
+
 4. Configure o TypeScript
 Crie um arquivo tsconfig.json com:
 
@@ -51,6 +52,7 @@ Altere ou confirme as opções abaixo:
     "strict": true
   }
 }
+
 5. Estrutura de pastas recomendada
 
 menu-exercicios-ts/
