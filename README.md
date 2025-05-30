@@ -49,12 +49,19 @@ Altere ou confirme as opções abaixo:
 
 
 {
+  
   "compilerOptions": {
+    
     "target": "es6",
+    
     "module": "commonjs",
+   
     "outDir": "./dist",
+    
     "rootDir": "./src",
+    
     "strict": true
+ 
   }
 }
 
@@ -99,26 +106,46 @@ Escolha uma opção e siga as instruções no terminal.
 🧪 Exercícios Disponíveis
 
 Nº	Descrição
+
 1	Soma de dois números
+
 2	Par ou ímpar
+
 3	Média de três notas
+
 4	Celsius → Fahrenheit
+
 5	Pares de 2 a 20
+
 6	Armazena 5 números em array
+
 7	Maior número de um array
+
 8	Contador de vogais
+
 9	Calculadora com switch
+
 10	Ordenação de array
+
 11	Classe Pessoa
+
 12	Classe Aluno (herança)
+
 13	Interface Veiculo
+
 14	Tabuada
+
 15	IMC
+
 16	Validação de senha
+
 17	Jogo de adivinhação
+
 18	Contador de palavras
 
+
 📌 Considerações Finais
+
 Este projeto é ideal para quem deseja reforçar fundamentos de programação usando TypeScript no terminal. Além disso, pode ser expandido para:
 
 Testes automatizados com Jest
