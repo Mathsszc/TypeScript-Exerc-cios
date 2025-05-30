@@ -1,182 +1,236 @@
-Menu de Exercícios em TypeScript
-Este projeto é uma coleção de 18 exercícios básicos de programação implementados em TypeScript, executados através de um menu interativo no terminal. É uma ótima maneira de praticar e reforçar conceitos fundamentais de lógica de programação, estruturas de dados e orientação a objetos com TypeScript.
+📘 Menu de Exercícios em TypeScript
+Este projeto é uma aplicação de terminal desenvolvida com TypeScript e utiliza o pacote readline-sync para permitir a entrada interativa de dados via terminal. Ele apresenta um menu com 18 exercícios práticos que abrangem diversos conceitos de programação.
 
-🚀 Pré-requisitos
-Antes de começar, certifique-se de que tem o Node.js e o npm (ou yarn) instalados na sua máquina. Pode descarregá-los em nodejs.org.
+🧩 Descrição do Projeto
+O objetivo deste projeto é treinar conceitos de lógica de programação, estrutura de dados e orientação a objetos em TypeScript, tudo isso com uma interface simples no terminal. O usuário pode navegar por um menu numérico e escolher entre diversos exercícios.
 
-🛠️ Configuração do Projeto
-Siga os passos abaixo para configurar e executar o projeto no seu ambiente local:
+🧰 Requisitos
+Node.js (versão 16 ou superior recomendada)
 
-Clone o repositório (ou crie uma pasta e adicione o código manualmente): Se fosse clonar de um repositório GitHub, o comando seria algo como:
+npm ou Yarn
 
-git clone [https://github.com/seu-usuario/menu-exercicios-ts.git](https://github.com/seu-usuario/menu-exercicios-ts.git)
+TypeScript
+
+ts-node (para execução direta de arquivos .ts)
+
+⚙️ Instalação e Configuração
+1. Clone o repositório (se aplicável)
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/menu-exercicios-ts.git
 cd menu-exercicios-ts
-
-
-
-Se estiver a criar manualmente, crie uma pasta para o projeto, por exemplo, menu-exercicios-ts, e navegue até ela.
-
-Inicialize o projeto Node.js: Dentro da pasta do projeto, execute:
-
+2. Inicialize o projeto Node.js
+bash
+Copiar
+Editar
 npm init -y
-
-
-
-Instale as dependências: Precisará do readline-sync para a entrada de dados no terminal e das dependências de desenvolvimento para TypeScript:
-
+3. Instale as dependências
+bash
+Copiar
+Editar
 npm install readline-sync
-npm install typescript ts-node @types/node @types/readline-sync --save-dev
+npm install typescript ts-node --save-dev
+4. Configure o TypeScript
+Crie um arquivo tsconfig.json com:
 
-
-
-@types/node e @types/readline-sync fornecem as definições de tipo para Node.js e readline-sync respetivamente, o que é útil para o desenvolvimento em TypeScript.
-
-Configure o TypeScript: Crie um ficheiro tsconfig.json na raiz do projeto. Pode gerar um ficheiro de configuração padrão com:
-
+bash
+Copiar
+Editar
 npx tsc --init
+Altere ou confirme as opções abaixo no arquivo tsconfig.json:
 
-
-
-Em seguida, modifique ou confirme as seguintes opções no seu tsconfig.json para que se pareça com o exemplo abaixo. As opções outDir e rootDir são importantes para organizar os ficheiros compilados e os fontes. esModuleInterop e skipLibCheck são configurações comuns para melhorar a compatibilidade e a velocidade de compilação.
-
+json
+Copiar
+Editar
 {
   "compilerOptions": {
-    "target": "es6",                 /* Especifique a versão do ECMAScript de destino. 'es6' (ou 'ES2015') é uma boa escolha moderna. */
-    "module": "commonjs",            /* Especifique a geração de código do módulo. 'commonjs' é padrão para projetos Node.js. */
-    "outDir": "./dist",              /* Redirecione a estrutura de saída para o diretório './dist'. */
-    "rootDir": "./src",              /* Especifique o diretório raiz dos ficheiros de entrada TypeScript como './src'. */
-    "strict": true,                  /* Habilite todas as verificações de tipo estrito para um código mais robusto. */
-    "esModuleInterop": true,         /* Permite a interoperabilidade de módulos CommonJS e ES, facilitando o uso de bibliotecas. */
-    "skipLibCheck": true,            /* Pule a verificação de tipo de todos os ficheiros de declaração (.d.ts), o que pode acelerar a compilação. */
-    "forceConsistentCasingInFileNames": true /* Garanta que as maiúsculas/minúsculas em nomes de ficheiros sejam consistentes. */
-  },
-  "include": ["src/*/"],           /* Define os ficheiros TypeScript a serem incluídos na compilação (todos os ficheiros .ts na pasta src). */
-  "exclude": ["node_modules", "*/.spec.ts"] /* Define os ficheiros a serem excluídos da compilação. */
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+  }
 }
-
-
-
-Estrutura de pastas recomendada: Organize os seus ficheiros da seguinte maneira:
-
+5. Estrutura de pastas recomendada
+pgsql
+Copiar
+Editar
 menu-exercicios-ts/
 ├── node_modules/
 ├── src/
-│   └── index.ts      ← Cole aqui o código com os exercícios
+│   └── index.ts   ← Cole aqui o código com os exercícios
 ├── tsconfig.json
 ├── package.json
-└── package-lock.json (ou yarn.lock, se estiver a usar yarn)
+🚀 Como Executar
+Dentro da pasta do projeto, execute:
 
-
-
-Observação: Crie a pasta src e mova o código TypeScript fornecido (o que contém as funções ex1, ex2, menu, etc.) para um ficheiro chamado index.ts dentro desta pasta src.
-
-▶️ Como Executar
-Com o projeto configurado e o código no ficheiro src/index.ts, pode executar os exercícios usando ts-node. ts-node permite que execute ficheiros TypeScript diretamente sem a necessidade de compilá-los para JavaScript primeiro, o que é ótimo para desenvolvimento.
-
-Dentro da pasta raiz do projeto (menu-exercicios-ts), execute o seguinte comando no terminal:
-
+bash
+Copiar
+Editar
 npx ts-node src/index.ts
+Você verá um menu como este:
 
-
-
-Verá um menu interativo no terminal:
-
+python-repl
+Copiar
+Editar
 ===== MENU DE EXERCÍCIOS =====
 0 - Sair
 1 - Exercício 1
 2 - Exercício 2
 ...
 18 - Exercício 18
-Escolha uma opção:
-
-
-
-Digite o número do exercício que deseja executar e pressione Enter. Siga as instruções no ecrã para cada exercício.
-
+Escolha uma opção e siga as instruções no terminal.
 🧪 Exercícios Disponíveis
-Aqui está uma lista dos exercícios incluídos no menu:
-
-Nº
-
-Descrição
-
-1
-
-Soma de dois números
-
-2
-
-Verifica se um número é par ou ímpar
-
-3
-
-Calcula a média de três notas
-
-4
-
-Converte Celsius para Fahrenheit
-
-5
-
-Imprime os números pares de 2 até 20
-
-6
-
-Lê 5 números e armazena num array
-
-7
-
-Mostra o maior número de um array fixo
-
-8
-
-Conta as vogais numa frase
-
-9
-
-Calculadora básica com switch
-
-10
-
-Ordena um array numérico
-
-11
-
-Classe Pessoa com método de exibição
-
-12
-
-Classe Aluno herdando de Pessoa
-
-13
-
-Interface Veiculo e classe Carro
-
-14
-
-Tabuada de um número
-
-15
-
-Calcula o IMC e classifica
-
-16
-
-Valida a força de uma senha
-
-17
-
-Jogo de adivinhação
-
-18
-
-Conta o número de palavras numa frase
+Nº	Descrição
+1	Soma de dois números
+2	Par ou ímpar
+3	Média de três notas
+4	Celsius → Fahrenheit
+5	Pares de 2 a 20
+6	Armazena 5 números em array
+7	Maior número de um array
+8	Contador de vogais
+9	Calculadora com switch
+10	Ordenação de array
+11	Classe Pessoa
+12	Classe Aluno (herança)
+13	Interface Veiculo
+14	Tabuada
+15	IMC
+16	Validação de senha
+17	Jogo de adivinhação
+18	Contador de palavras
 
 📌 Considerações Finais
 Este projeto é ideal para quem deseja reforçar fundamentos de programação usando TypeScript no terminal. Além disso, pode ser expandido para:
 
-Testes automatizados: Integrar um framework de testes como Jest para garantir a correção de cada função.
+Testes automatizados com Jest
 
-Interface gráfica: Desenvolver uma interface gráfica simples usando Electron ou tecnologias web (como React, Vue, ou Angular com Node.js no backend).
+Interface gráfica com Electron ou Web
 
-Publicação como CLI: Transformar o projeto numa ferramenta de linha de comando (CLI) instalável via npm usando npm link para teste local ou publicando no registo npm para distribuição mais ampla.
+Publicação como CLI com npm link
+
+Essa formatação ajuda a deixar os comandos bash isolados e claros, sem confusão sobre o que é código
+
+
+
+
+Você disse:
+no texto que mandei o bash esta pegando o readme inteiro, dai por exemplo tem um json e ele n muda entendeu?
+
+O ChatGPT disse:
+Agora ficou claro! O que acontece é que no seu README, quando você coloca o comando bash para execução, o terminal está interpretando o bloco inteiro de código como se fosse um único comando, o que está fazendo com que o conteúdo (como o JSON) fique "desformatado" e não seja interpretado corretamente.
+
+Por exemplo, o código do JSON dentro do bloco de código do bash está causando esse problema porque o terminal não entende a estrutura de um arquivo JSON ou TypeScript quando está dentro de um bloco bash. O ideal é separar corretamente os comandos de terminal e o código de configuração, para que o terminal entenda onde termina um e começa o outro.
+
+Vou te mostrar como corrigir isso, separando de maneira mais adequada as seções de terminal e código no seu README.
+
+Ajuste do README
+Abaixo está uma versão corrigida, com a estrutura mais clara entre os comandos bash e o código JSON ou TypeScript, para evitar que o terminal "pegue" o arquivo inteiro.
+
+⚙️ Instalação e Configuração
+1. Clone o repositório (se aplicável)
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/menu-exercicios-ts.git
+cd menu-exercicios-ts
+2. Inicialize o projeto Node.js
+bash
+Copiar
+Editar
+npm init -y
+3. Instale as dependências
+bash
+Copiar
+Editar
+npm install readline-sync
+npm install typescript ts-node --save-dev
+4. Configure o TypeScript
+Crie o arquivo tsconfig.json executando:
+
+bash
+Copiar
+Editar
+npx tsc --init
+Esse comando irá gerar um arquivo de configuração do TypeScript. Após isso, abra o arquivo tsconfig.json e edite as opções conforme abaixo:
+
+json
+Copiar
+Editar
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+  }
+}
+5. Estrutura de pastas recomendada
+A estrutura do projeto deve ser parecida com esta:
+
+pgsql
+Copiar
+Editar
+menu-exercicios-ts/
+├── node_modules/
+├── src/
+│   └── index.ts   ← Cole aqui o código com os exercícios
+├── tsconfig.json
+├── package.json
+Agora o terminal sabe que a parte do bash está separada dos trechos de código, como o JSON, e tudo deve ser interpretado corretamente.
+
+Exemplo de Código Correto no README
+Aqui está como você pode escrever o fluxo do menu de exercícios em TypeScript dentro do README, sem que o terminal "pegue" o código todo:
+
+Exemplo de Código do Menu de Exercícios em TypeScript:
+typescript
+Copiar
+Editar
+import readlineSync from 'readline-sync';
+
+function exibirMenu() {
+  console.log("===== MENU DE EXERCÍCIOS =====");
+  console.log("0 - Sair");
+  console.log("1 - Exercício 1");
+  console.log("2 - Exercício 2");
+  // ... e assim por diante
+}
+
+function iniciarAplicacao() {
+  let escolha = -1;
+
+  while (escolha !== 0) {
+    exibirMenu();
+    escolha = parseInt(readlineSync.question("Escolha uma opção: "), 10);
+
+    switch (escolha) {
+      case 0:
+        console.log("Saindo...");
+        break;
+      case 1:
+        console.log("Você escolheu o Exercício 1");
+        // Adicione lógica do Exercício 1 aqui
+        break;
+      case 2:
+        console.log("Você escolheu o Exercício 2");
+        // Adicione lógica do Exercício 2 aqui
+        break;
+      default:
+        console.log("Opção inválida.");
+    }
+  }
+}
+
+iniciarAplicacao();
+Como Rodar o Projeto
+Para rodar o projeto, no terminal execute:
+
+bash
+Copiar
+Editar
+npx ts-node src/index.ts
+Você verá o menu sendo exibido no terminal e poderá interagir com ele.
+
